@@ -1,0 +1,19 @@
+# Use a specific container image for the application
+FROM ghcr.io/open-webui/open-webui:main
+
+# Set the main working directory inside the container
+WORKDIR /app/backend
+
+# Copy the database file into the container
+# and the core configuration is located in the Environment
+# and Secret Environment settings
+COPY --chown=$UID:$GID src/env.py /app/backend/open_webui/
+
+# Set the database permission
+RUN chmod 777 /app/backend/open_webui/env.py
+
+# Open the port so the application can be accessed
+EXPOSE 8800
+
+# Start the application using the startup script
+CMD ["bash", "start.sh"]
