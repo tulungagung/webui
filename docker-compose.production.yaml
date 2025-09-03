@@ -4,4 +4,4 @@ services:
       context: .
       dockerfile: Dockerfile.prod
     volumes:
-      -  ./src:/app/backend/data
+      -  'open-webui-data:/app/backend/data'
