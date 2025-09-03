@@ -3,3 +3,5 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.prod
+    volumes:
+      -  ./src:/app/backend/data
