@@ -1,5 +1,5 @@
 services:
-  web:
+  open-webui:
     build:
       context: .
       dockerfile: Dockerfile.prod
