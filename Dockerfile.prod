@@ -12,6 +12,7 @@ COPY --chown=$UID:$GID src/favicon.png /app/backend/static/
 
 # Set the permission
 RUN chmod 777 /app/backend/open_webui/env.py
+RUN chmod 777 /app/backend/static/favicon.png
 
 # Open the port so the application can be accessed
 EXPOSE 8800
