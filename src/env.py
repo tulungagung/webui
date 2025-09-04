@@ -111,7 +111,9 @@ for source in log_sources:
 log.setLevel(SRC_LOG_LEVELS["CONFIG"])
 
 WEBUI_NAME = os.environ.get("WEBUI_NAME", "Simata")
-
+if WEBUI_NAME != "Simata":
+    WEBUI_NAME += ""
+    
 WEBUI_FAVICON_URL = "https://cdn.jsdelivr.net/gh/tulungagung/aset@utama/img/favicon.png"
 
 TRUSTED_SIGNATURE_KEY = os.environ.get("TRUSTED_SIGNATURE_KEY", "")
