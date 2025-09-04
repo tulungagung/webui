@@ -10,11 +10,13 @@ WORKDIR /app/backend
 COPY --chown=$UID:$GID ./src/env.py /app/backend/open_webui/env.py
 COPY --chown=$UID:$GID ./src/favicon.png /app/backend/open_webui/static/favicon.png
 COPY --chown=$UID:$GID ./src/favicon.png /app/backend/static/favicon.png
+COPY --chown=$UID:$GID ./src/favicon.png /app/backend/static/static/favicon.png
 
 # Set the permission
 RUN chmod 777 /app/backend/open_webui/env.py
 RUN chmod 777 /app/backend/open_webui/static/favicon.png
 RUN chmod 777 /app/backend/static/favicon.png
+RUN chmod 777 /app/backend/static/static/favicon.png
 
 # Open the port so the application can be accessed
 EXPOSE 8800
