@@ -1,5 +1,5 @@
 # Use a specific container image for the application
-FROM ghcr.io/open-webui/open-webui:v0.6.26
+FROM ghcr.io/open-webui/open-webui:v0.6.28
 
 # Set the main working directory inside the container
 WORKDIR /app/backend
