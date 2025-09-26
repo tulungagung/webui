@@ -9,12 +9,18 @@ WORKDIR /app/backend
 # and Secret Environment settings
 COPY --chown=$UID:$GID ./src/env.py /app/backend/open_webui/env.py
 COPY --chown=$UID:$GID ./src/favicon.png /app/build/static/favicon.png
+COPY --chown=$UID:$GID ./src/favicon.png /app/build/static/favicon.svg
+COPY --chown=$UID:$GID ./src/favicon.png /app/build/static/favicon.ico
 COPY --chown=$UID:$GID ./src/favicon.png /app/backend/open_webui/static/favicon.png
+COPY --chown=$UID:$GID ./src/favicon.png /app/backend/open_webui/static/favicon.svg
+COPY --chown=$UID:$GID ./src/favicon.png /app/backend/open_webui/static/favicon.ico
 
 # Set the permission
 RUN chmod 777 /app/backend/open_webui/env.py
 RUN chmod 777 /app/build/static/favicon.png
 RUN chmod 777 /app/backend/open_webui/static/favicon.png
+RUN chmod 777 /app/backend/open_webui/static/favicon.svg
+RUN chmod 777 /app/backend/open_webui/static/favicon.ico
 
 # Open the port so the application can be accessed
 EXPOSE 8800
