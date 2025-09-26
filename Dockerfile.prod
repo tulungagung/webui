@@ -18,6 +18,8 @@ COPY --chown=$UID:$GID ./src/favicon.png /app/backend/open_webui/static/favicon.
 # Set the permission
 RUN chmod 777 /app/backend/open_webui/env.py
 RUN chmod 777 /app/build/static/favicon.png
+RUN chmod 777 /app/build/static/favicon.svg
+RUN chmod 777 /app/build/static/favicon.ico
 RUN chmod 777 /app/backend/open_webui/static/favicon.png
 RUN chmod 777 /app/backend/open_webui/static/favicon.svg
 RUN chmod 777 /app/backend/open_webui/static/favicon.ico
