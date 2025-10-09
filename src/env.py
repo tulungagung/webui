@@ -114,7 +114,7 @@ WEBUI_NAME = os.environ.get("WEBUI_NAME", "Simata")
 if WEBUI_NAME != "Simata":
     WEBUI_NAME += ""
 
-WEBUI_FAVICON_URL = "https://cdn.jsdelivr.net/gh/tulungagung/webui@main/src/favicon.png"
+WEBUI_FAVICON_URL = "https://openwebui.com/favicon.png"
 
 TRUSTED_SIGNATURE_KEY = os.environ.get("TRUSTED_SIGNATURE_KEY", "")
 
@@ -210,6 +210,11 @@ SAFE_MODE = os.environ.get("SAFE_MODE", "false").lower() == "true"
 
 ENABLE_FORWARD_USER_INFO_HEADERS = (
     os.environ.get("ENABLE_FORWARD_USER_INFO_HEADERS", "False").lower() == "true"
+)
+
+# Experimental feature, may be removed in future
+ENABLE_STAR_SESSIONS_MIDDLEWARE = (
+    os.environ.get("ENABLE_STAR_SESSIONS_MIDDLEWARE", "False").lower() == "true"
 )
 
 ####################################
@@ -468,7 +473,9 @@ ENABLE_COMPRESSION_MIDDLEWARE = (
 ####################################
 # OAUTH Configuration
 ####################################
-
+ENABLE_OAUTH_EMAIL_FALLBACK = (
+    os.environ.get("ENABLE_OAUTH_EMAIL_FALLBACK", "False").lower() == "true"
+)
 
 ENABLE_OAUTH_ID_TOKEN_COOKIE = (
     os.environ.get("ENABLE_OAUTH_ID_TOKEN_COOKIE", "True").lower() == "true"
@@ -481,7 +488,6 @@ OAUTH_CLIENT_INFO_ENCRYPTION_KEY = os.environ.get(
 OAUTH_SESSION_TOKEN_ENCRYPTION_KEY = os.environ.get(
     "OAUTH_SESSION_TOKEN_ENCRYPTION_KEY", WEBUI_SECRET_KEY
 )
-
 
 ####################################
 # SCIM Configuration
