@@ -114,7 +114,7 @@ WEBUI_NAME = os.environ.get("WEBUI_NAME", "Simata")
 if WEBUI_NAME != "Simata":
     WEBUI_NAME += ""
 
-WEBUI_FAVICON_URL = "https://openwebui.com/favicon.png"
+WEBUI_FAVICON_URL = "https://cdn.jsdelivr.net/gh/tulungagung/webui@main/src/favicon.png"
 
 TRUSTED_SIGNATURE_KEY = os.environ.get("TRUSTED_SIGNATURE_KEY", "")
 
