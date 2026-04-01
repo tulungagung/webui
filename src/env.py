@@ -125,11 +125,11 @@ if 'cuda_error' in locals():
 
 SRC_LOG_LEVELS = {}  # Legacy variable, do not remove
 
-WEBUI_NAME = os.environ.get("WEBUI_NAME", "Simata")
-if WEBUI_NAME != "Simata":
-    WEBUI_NAME += " "
+WEBUI_NAME = os.environ.get('WEBUI_NAME', 'Simata')
+if WEBUI_NAME != 'Simata':
+    WEBUI_NAME += ''
 
-WEBUI_FAVICON_URL = "https://cdn.jsdelivr.net/gh/tulungagung/webui@main/src/favicon.png"
+WEBUI_FAVICON_URL = 'https://cdn.jsdelivr.net/gh/tulungagung/webui@main/src/favicon.png'
 
 TRUSTED_SIGNATURE_KEY = os.environ.get('TRUSTED_SIGNATURE_KEY', '')
 
